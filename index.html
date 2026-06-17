@@ -2,44 +2,69 @@
 <html>
 <head>
 <title>Little Monster's Diary 🌸</title>
+
 <style>
 body{
-    background: linear-gradient(to bottom,#ffe6f2,#f3e8ff);
-    font-family: Arial, sans-serif;
-    text-align:center;
-    color:#555;
+margin:0;
+font-family: "Trebuchet MS", sans-serif;
+background: linear-gradient(#ffe6f2,#efe4ff);
+overflow-x:hidden;
+text-align:center;
+color:#666;
 }
 
-.container{
-    width:80%;
-    margin:auto;
-    padding-top:50px;
+.cloud{
+position:absolute;
+font-size:40px;
+animation: float 10s infinite alternate;
 }
 
-.card{
-    background:white;
-    border-radius:20px;
-    padding:20px;
-    margin:20px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+.c1{top:40px;left:10%;}
+.c2{top:100px;right:15%;}
+
+@keyframes float{
+from{transform:translateX(0);}
+to{transform:translateX(30px);}
+}
+
+header{
+padding:50px;
 }
 
 h1{
-    color:#ff69b4;
+color:#ff6eb4;
+font-size:45px;
+}
+
+.card{
+background:white;
+margin:20px auto;
+width:85%;
+padding:25px;
+border-radius:25px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.heart{
+font-size:30px;
+animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat{
+50%{transform:scale(1.2);}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="cloud c1">☁️⭐</div>
+<div class="cloud c2">☁️🌸</div>
 
+<header>
 <h1>🐻 Little Monster's Diary 🌸</h1>
-
-<div class="card">
-<h2>Welcome</h2>
 <p>Every memory deserves a special place ✨</p>
-</div>
+</header>
 
 <div class="card">
 <h2>📖 Today's Diary</h2>
@@ -47,11 +72,16 @@ h1{
 </div>
 
 <div class="card">
-<h2>💌 Favorite Quote</h2>
-<p>"The best memories are the ones we create together."</p>
+<h2>🌷 Memory Wall</h2>
+<p>My happiest memories live here.</p>
 </div>
 
+<div class="card">
+<h2>📸 Photo Album</h2>
+<p>Coming soon...</p>
 </div>
+
+<div class="heart">💖</div>
 
 </body>
 </html>
