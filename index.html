@@ -67,8 +67,25 @@ animation: heartbeat 1.5s infinite;
 </header>
 
 <div class="card">
-<h2>📖 Today's Diary</h2>
-<p>Dear Diary, today was beautiful...</p>
+<h2>📖 My Diary</h2>
+
+<textarea id="diary"
+rows="10"
+style="width:90%; border-radius:15px; padding:15px; font-size:16px;">
+</textarea>
+
+<script>
+const diary = document.getElementById("diary");
+
+// Load saved text
+diary.value = localStorage.getItem("myDiary") || "";
+
+// Save automatically
+diary.addEventListener("input", () => {
+  localStorage.setItem("myDiary", diary.value);
+});
+</script>
+
 </div>
 
 <div class="card">
