@@ -89,25 +89,40 @@ diary.addEventListener("input", () => {
 </div>
 
 <div class="card">
+<div class="card">
 <h2>🌷 Memory Wall</h2>
-<p>My happiest memories live here.</p>
+<textarea id="memoryWall" rows="6"
+style="width:90%;border-radius:15px;padding:15px;"></textarea>
 </div>
 
 <div class="card">
 <h2>📸 Photo Album</h2>
-<p>Coming soon...</p>
+<textarea id="photoAlbum" rows="6"
+style="width:90%;border-radius:15px;padding:15px;"></textarea>
 </div>
 
-<div class="heart">💖</div>
-
-</body>
 <div class="card">
 <h2>🌸 My Favorite Things</h2>
-<p>Flowers • Music • Memories • Cute Moments</p>
+<textarea id="favoriteThings" rows="6"
+style="width:90%;border-radius:15px;padding:15px;"></textarea>
 </div>
 
 <div class="card">
 <h2>💖 Message Box</h2>
+<textarea id="messageBox" rows="6"
+style="width:90%;border-radius:15px;padding:15px;"></textarea>
+</div>
+
+<script>
+["memoryWall","photoAlbum","favoriteThings","messageBox"]
+.forEach(id => {
+const box = document.getElementById(id);
+box.value = localStorage.getItem(id) || "";
+box.addEventListener("input", () => {
+localStorage.setItem(id, box.value);
+});
+});
+</script>
 <p>Thank you for visiting Little Monster's Diary!</p>
 </div>
 <div class="card">
