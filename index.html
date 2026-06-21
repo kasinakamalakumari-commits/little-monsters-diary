@@ -70,6 +70,23 @@ animation: heartbeat 1.5s infinite;
 </head>
 
 <body>
+<button onclick="toggleDarkMode()"
+style="
+position:fixed;
+top:20px;
+right:20px;
+background:#d8b4ff;
+border:none;
+padding:10px 15px;
+border-radius:20px;">
+🌙 Dark Mode
+</button>
+
+<script>
+function toggleDarkMode() {
+document.body.classList.toggle("dark");
+}
+</script>
 <script>
 let password = prompt("Enter password 💌");
 
