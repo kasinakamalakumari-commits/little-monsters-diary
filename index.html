@@ -5,7 +5,6 @@
 
 <style>
 body{
-<div class="moon">🌙</div>
 margin:0;
 background-attachment: fixed;
 font-family: "Trebuchet MS", sans-serif;
@@ -120,12 +119,102 @@ transform:translateY(110vh) rotate(360deg);
 opacity:0.8;
 }
 }
+.moon{
+position:fixed;
+top:60px;
+right:40px;
+font-size:70px;
+animation: moonGlow 2s infinite alternate;
+}
+
+@keyframes moonGlow{
+from{
+filter:drop-shadow(0 0 5px white);
+}
+to{
+filter:drop-shadow(0 0 25px #fff7c2);
+}
+}
+.star{
+position:fixed;
+font-size:25px;
+animation: twinkle 2s infinite alternate;
+}
+
+.s1{top:100px;left:20%;}
+.s2{top:200px;right:30%;}
+.s3{top:350px;left:75%;}
+.s4{top:500px;right:10%;}
+
+@keyframes twinkle{
+from{opacity:0.3;}
+to{opacity:1;}
+}
+.heart-float{
+position:fixed;
+bottom:-50px;
+font-size:30px;
+animation: rise 8s linear infinite;
+pointer-events:none;
+}
+
+.h3{left:15%;}
+.h4{left:50%;}
+.h5{left:80%;}
+
+@keyframes rise{
+0%{
+transform:translateY(0);
+opacity:0;
+}
+50%{
+opacity:1;
+}
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+.moving-cloud{
+position:fixed;
+font-size:50px;
+animation: cloudMove 25s linear infinite;
+}
+
+.mc1{
+top:120px;
+left:-100px;
+}
+
+.mc2{
+top:250px;
+left:-200px;
+animation-duration:35s;
+}
+
+@keyframes cloudMove{
+from{
+transform:translateX(0);
+}
+to{
+transform:translateX(130vw);
+}
+}
 </style>
 
 </head>
 
 <body>
-
+<div class="moving-cloud mc1">☁️</div>
+<div class="moving-cloud mc2">☁️</div>
+<div class="heart-float h3">💖</div>
+<div class="heart-float h4">💕</div>
+<div class="heart-float h5">💗</div>
+<div class="star s1">⭐</div>
+<div class="star s2">✨</div>
+<div class="star s3">⭐</div>
+<div class="star s4">✨</div>
+<div class="moon">🌙</div>
 <div class="sakura" style="left:5%;animation-duration:8s;">🌸</div>
 <div class="sakura" style="left:20%;animation-duration:10s;">🌸</div>
 <div class="sakura" style="left:40%;animation-duration:7s;">🌸</div>
@@ -268,3 +357,10 @@ Open Secret Diary 🌸
 </div>
 </body>
 </html>
+<footer style="
+margin-top:40px;
+padding:20px;
+color:#ff8fc4;
+font-size:18px;">
+🎀 Made with love by Sai 🌸🐻🦋💖
+</footer>
