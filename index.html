@@ -101,6 +101,24 @@ border:2px solid #c9a9ff;
 .dark h1{
 color:#ffb6e6 !important;
 }
+.sakura{
+position:fixed;
+top:-50px;
+font-size:25px;
+animation: fall linear infinite;
+pointer-events:none;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-50px) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+opacity:0.8;
+}
+}
 </style>
 
 </head>
