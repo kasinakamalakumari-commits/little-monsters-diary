@@ -272,11 +272,42 @@ transform:translateX(150vw) rotate(-35deg);
 opacity:0;
 }
 }
+.rain{
+position:fixed;
+font-size:20px;
+animation: rainFall linear infinite;
+opacity:0;
+}
+
+.r1{left:10%;animation-duration:3s;}
+.r2{left:30%;animation-duration:4s;}
+.r3{left:50%;animation-duration:2.5s;}
+.r4{left:70%;animation-duration:3.5s;}
+.r5{left:90%;animation-duration:4.5s;}
+
+@keyframes rainFall{
+0%{
+top:-10%;
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+top:110%;
+opacity:0;
+}
+}
 </style>
 
 </head>
 
 <body>
+<div class="rain r1">💧</div>
+<div class="rain r2">💧</div>
+<div class="rain r3">💧</div>
+<div class="rain r4">💧</div>
+<div class="rain r5">💧</div>
 <div class="shooting-star sstar1"></div>
 <div class="shooting-star sstar2"></div>
 <div class="butterfly b1">🦋</div>
