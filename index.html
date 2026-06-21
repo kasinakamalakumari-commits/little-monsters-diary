@@ -200,11 +200,89 @@ to{
 transform:translateX(130vw);
 }
 }
+.teddy{
+position:fixed;
+font-size:45px;
+}
+
+.teddy1{
+bottom:40px;
+left:20px;
+}
+
+.teddy2{
+bottom:40px;
+right:20px;
+}
+.butterfly{
+position:fixed;
+font-size:35px;
+animation: fly 12s linear infinite;
+}
+
+.b1{
+top:300px;
+left:-50px;
+}
+
+.b2{
+top:500px;
+left:-100px;
+animation-duration:18s;
+}
+
+@keyframes fly{
+from{
+transform:translateX(0);
+}
+to{
+transform:translateX(120vw);
+}
+}
+.shooting-star{
+position:fixed;
+width:120px;
+height:2px;
+background:white;
+transform:rotate(-35deg);
+animation: shooting 6s infinite;
+}
+
+.sstar1{
+top:120px;
+left:-150px;
+}
+
+.sstar2{
+top:300px;
+left:-250px;
+animation-delay:3s;
+}
+
+@keyframes shooting{
+0%{
+transform:translateX(0) rotate(-35deg);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateX(150vw) rotate(-35deg);
+opacity:0;
+}
+}
 </style>
 
 </head>
 
 <body>
+<div class="shooting-star sstar1"></div>
+<div class="shooting-star sstar2"></div>
+<div class="butterfly b1">🦋</div>
+<div class="butterfly b2">🦋</div>
+<div class="teddy teddy1">🧸</div>
+<div class="teddy teddy2">🧸</div>
 <div class="moving-cloud mc1">☁️</div>
 <div class="moving-cloud mc2">☁️</div>
 <div class="heart-float h3">💖</div>
