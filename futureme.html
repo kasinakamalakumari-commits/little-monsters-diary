@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>💌 Letter to My Future Self</title>
+
+<style>
+body{
+background:linear-gradient(#ffe6f2,#efe4ff);
+font-family:"Trebuchet MS",sans-serif;
+text-align:center;
+padding:30px;
+color:#666;
+}
+
+.card{
+background:white;
+width:85%;
+margin:auto;
+padding:25px;
+border-radius:25px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+textarea{
+width:90%;
+height:300px;
+padding:15px;
+border-radius:20px;
+font-size:16px;
+}
+
+button{
+background:#ffb6d9;
+padding:15px 25px;
+border:none;
+border-radius:20px;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>💌 Letter to My Future Self 💌</h1>
+
+<div class="card">
+
+<p>
+Dear Future Me,<br>
+I hope you're smiling, chasing your dreams, and remembering how far you've come. 🌸💖
+</p>
+
+<textarea id="futureLetter" placeholder="Write a letter to your future self..."></textarea>
+
+</div>
+
+<br>
+
+<a href="index.html">
+<button>🏠 Back Home</button>
+</a>
+
+<script>
+const letter = document.getElementById("futureLetter");
+
+letter.value = localStorage.getItem("futureLetter") || "";
+
+letter.addEventListener("input", () => {
+localStorage.setItem("futureLetter", letter.value);
+});
+</script>
+
+</body>
+</html>
